@@ -1,8 +1,10 @@
-name: hello-world
+name: CI-Pipeline
 'on': push
 jobs:
   my-job:
     runs-on: self-hosted
     steps:
-      - name: my-step
-        run: echo "Hello World!"
+      - name: run jq tool
+        run: |
+          echo "scripts_dir=${{ github.workspace }}/scripts" >> $GITHUB_ENV
+          ${{ env.scripts_dir }}/JQTool/Read_Json.sh
