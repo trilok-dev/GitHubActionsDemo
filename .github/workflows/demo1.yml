@@ -6,5 +6,5 @@ jobs:
     steps:
       - name: run jq tool
         run: |
-          echo "scripts_dir=${{ github.workspace }}/scripts" >> $GITHUB_ENV
-          ${{ env.scripts_dir }}/JQTool/Read_Json.sh
+          echo "scripts_dir=D:/GitHub Clone/GitHubActionsDemo/scripts" >> $GITHUB_ENV
+          bash "${{ env.scripts_dir }}/JQTool/Read_Json.sh"
