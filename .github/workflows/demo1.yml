@@ -5,6 +5,5 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: run jq tool
-        run: |
-          echo "scripts_dir=D:/GitHub Clone/GitHubActionsDemo/scripts" >> $GITHUB_ENV
-          bash "${{ env.scripts_dir }}/JQTool/Read_Json.sh"
+        run: echo "hello from cmd.exe"
+        shell: cmd
